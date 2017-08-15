@@ -1,0 +1,5 @@
+[all]
+test-role-vagrant ansible_host=127.0.0.1 ansible_port=2222 ansible_ssh_private_key_file="/home/jooho/RHB/dev/git/mine/ansible/ansible-roles/ansible-role-test-openldap-server/.vagrant/machines/test-role-vagrant/virtualbox/private_key" ansible_user=vagrant
+
+[group1]
+test-role-vagrant
