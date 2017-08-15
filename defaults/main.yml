@@ -2,9 +2,10 @@
 # defaults file for ansible-role-test-openldap-server
 
 temp_dir: /tmp/test-openldap-server
-ldap_port: 389
+ldap_http_port: 389
+ldap_https_port: 636
 clean_all: true
-ssl: true
-ssl_ca_cert: /home/jooho/cert_base/ldap/certs/root-ca.cert.pem
-ssl_cert: /home/jooho/cert_base/ldap/ldap.example.com/ldap.example.com.cert.pem
-ssl_private_key: /home/jooho/cert_base/ldap/ldap.example.com/ldap.example.com.key.pem
+ssl: false
+ssl_ca_cert: ''
+ssl_cert: ''
+ssl_private_key: ''

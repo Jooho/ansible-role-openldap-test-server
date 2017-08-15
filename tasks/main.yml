@@ -69,7 +69,7 @@
       copy: src={{ssl_cert}} dest=/etc/openldap/certs/{{ssl_cert|basename}} owner=ldap group=ldap
 
     - name: Copy CA Cert to /etc/openldap/certs
-      copy: src={{ssl_ca_cert}} dest=/etc/openldap/certs/{{ssl_ca_cert|basename}} owner=ldap group=ldap
+      copy: src={{ssl_ca_cert}} dest=/etc/openldap/certs/{{ssl_ca_cert|basename}} owner=ldap group=ldap 
 
     - name: Copy Private key to /etc/openldap/certs
       copy: src={{ssl_private_key}} dest=/etc/openldap/certs/{{ssl_private_key|basename}} owner=ldap group=ldap
