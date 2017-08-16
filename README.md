@@ -48,13 +48,24 @@ Information
 
 - LDAP Base DN: dc=example,dc=com
 
-LDAP Test Data
+**LDAP Test Data**
 
 |       Group     |      CN     |    OU    |    PW    |                  CN raw                    |
 |-----------------|-------------|----------|----------|--------------------------------------------|
 |  Administrators | Sue Jacobs  |  People  |  redhat  | cn=Sue Jacobs,ou=People,dc=example,dc=com  | 
 |  Administrators | Pete Minsky |  People  |  redhat  | cn=Pete Minsky,ou=People,dc=example,dc=com | 
 |  Developers     | Jooho Lee   |  People  |  redhat  | cn=Jooho Lee,ou=People,dc=example,dc=com   |
+
+
+Client Configuration
+--------------------
+The root-ca.cert.pem file will be found on ldap server vm
+
+```
+TLS_CACERTDIR /etc/openldap/cacerts
+TLS_CACERT    /etc/openldap/certs/root-ca.cert.pem
+TLS_REQCERT allow
+```
 
 
 Useful Commands
@@ -71,11 +82,13 @@ ldapdelete -H ldaps://ldap.example.com -D "cn=read-only-admin,dc=example,dc=com"
 
 ```
 
+
+
 References
 ----------
-- [Install openldap](http://www.itzgeek.com/how-tos/linux/centos-how-tos/step-step-openldap-server-configuration-centos-7-rhel-7.html)
+- [Install OpenLDAP on CentOS7](http://www.itzgeek.com/how-tos/linux/centos-how-tos/step-step-openldap-server-configuration-centos-7-rhel-7.html)
 
-- [Test Server](http://www.forumsys.com/tutorials/integration-how-to/ldap/online-ldap-test-server/)
+- [External LDAP Test Server](http://www.forumsys.com/tutorials/integration-how-to/ldap/online-ldap-test-server/)
 
 
 
